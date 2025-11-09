@@ -62,6 +62,16 @@ exports.Devices = [
                 characteristic: function_characteristic_1.FunctionCharacteristic.Power
             }
         ]
+    },
+    {
+        deviceClass: 'glass-door',
+        deviceType: device_type_1.DeviceType.Switch,
+        functions: [
+            {
+                functionClass: 'power',
+                characteristic: function_characteristic_1.FunctionCharacteristic.Power
+            }
+        ]
     }
 ];
 //# sourceMappingURL=hubspace-devices.js.map

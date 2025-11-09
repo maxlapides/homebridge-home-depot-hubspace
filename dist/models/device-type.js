@@ -27,6 +27,8 @@ function getDeviceTypeForKey(key) {
             return DeviceType.Outlet;
         case 'switch':
             return DeviceType.Switch;
+        case 'glass-door':
+            return DeviceType.Switch;
         default:
             return DeviceType.None;
     }

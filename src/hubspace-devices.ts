@@ -61,5 +61,15 @@ export const Devices: DeviceDef[] = [
                 characteristic: FunctionCharacteristic.Power
             }
         ]
+    },
+    {
+        deviceClass: 'glass-door',
+        deviceType: DeviceType.Switch,
+        functions: [
+            {
+                functionClass: 'power',
+                characteristic: FunctionCharacteristic.Power
+            }
+        ]
     }
 ];
