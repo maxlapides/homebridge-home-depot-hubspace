@@ -94,20 +94,8 @@ class DiscoveryService {
         var _a;
         const type = (0, device_type_1.getDeviceTypeForKey)(response.description.device.deviceClass);
         const deviceDef = hubspace_devices_1.Devices.find(d => d.deviceType === type);
-        if (!deviceDef) {
-            const metadata = JSON.stringify({
-                id: response.id,
-                deviceId: response.deviceId,
-                friendlyName: response.friendlyName,
-                typeId: response.typeId,
-                deviceClass: response.description.device.deviceClass,
-                manufacturer: response.description.device.manufacturerName,
-                model: response.description.device.model,
-                functions: response.description.functions
-            }, null, 2);
-            this._platform.log.warn(`Discovered unsupported Hubspace device.\n${metadata}`);
+        if (!deviceDef)
             return [];
-        }
         const supportedFunctions = this.findSupportedFunctionsForDevice(deviceDef, response.description.functions);
         const devices = [];
         for (const supportedFc of supportedFunctions) {
